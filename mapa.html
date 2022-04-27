@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- meta para aceptar caracteres especiales -->
         <meta charset="UTF-8">
+
+        <!-- Viewport para responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RosTourist</title>
+
+        <!-- Titulo de la página -->
+        <title>RosTourist: Mapa</title>
+
+        <!-- Favicon para la página -->
         <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+        <!-- Hojas de estilo (Bootstrap y propia. Ordenados para que el Bootstrap no afecte a la mía) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
@@ -26,14 +36,24 @@
             </nav>
         </header>
 
+        <!-- Main / Contenido principal -->
         <main class="main">
             <h1>RosTourist: Mapa de Rosario</h1>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107134.56934196998!2d-60.76667965536046!3d-32.95218976027299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6539335d7d75b%3A0xec4086e90258a557!2sRosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1650653409573!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </main>
 
-        <footer class="footer">
+        <!-- Footer / Pie de página -->
+        <!-- NOTA: Quise hacer un formulario de contacto (Para aprovechar más el bootstrap y darle más contenido al proyecto) en el pie de cada página, pero no sabía como hacer para que los datos del formulario se envien a un email... por ende no lo veía como un aporte al proyecto :( -->
+        <footer class="footer col-xs-12 col-sm-10 col-md-8 col-xl-6">
+            <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+
+            <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+
             Creado con ♥ por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-
         </footer>
+
+        <!-- Script para aplicar Bootstrap -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

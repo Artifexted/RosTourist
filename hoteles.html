@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- meta para aceptar caracteres especiales -->
         <meta charset="UTF-8">
+
+        <!-- Viewport para responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RosTourist</title>
+
+        <!-- Titulo de la página -->
+        <title>RosTourist: Hoteles</title>
+
+        <!-- Favicon para la página -->
         <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+        <!-- Hojas de estilo (Bootstrap y propia. Ordenados para que el Bootstrap no afecte a la mía) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
@@ -26,20 +36,22 @@
             </nav>
         </header>
 
+        <!-- Main / Contenido principal -->
         <main class="main">
+            <!-- Agregamos la clase "rounded" de Bootstrap a las imagenes ^.^ -->
+
             <h1>RosTourist: Hoteles</h1>
             <p class="primaryText">Lista de lugares en los que podes pasar tu estadía durante tu tiempo en la ciudad</p>
 
-            <img src="./assets/img/hoteles/holiday.jpg" alt="Fotografia del frente del hotel Holiday Inn Express, Rosario." class="place-img">
+            <img src="./assets/img/hoteles/holiday.jpg" alt="Fotografia del frente del hotel Holiday Inn Express, Rosario." class="place-img rounded">
             <h2>Holiday Inn Express</h2>
             <p>Ubicado en la zona comercial de la ciudad, este hotel informal se encuentra a 14 minutos a pie del Centro Cultural del Parque de España y a 2 km del Monumento Nacional a la Bandera.</p>
-
 
             <p>Las habitaciones tranquilas cuentan con Wi-Fi gratis, TV de pantalla plana y tetera y cafetera. Las suites tienen además áreas de visitas y comedor, frigobar, microondas y barra con lavabo.</p>
                 
             <p>El desayuno tipo bufé está incluido y se sirve en una luminosa sala de desayuno. Otros servicios incluyen un gimnasio, un sauna y un club infantil.</p>
 
-            <img src="./assets/img/hoteles/dazzler.jpg" alt="Fotografia del interior del hotel Dazzler by Wyndham, Rosario." class="place-img"> 
+            <img src="./assets/img/hoteles/dazzler.jpg" alt="Fotografia del interior del hotel Dazzler by Wyndham, Rosario." class="place-img rounded"> 
             <h2>Dazzler by Wyndham</h2>
             <p>Este hotel elegante ubicado en el barrio de La Refinería, en Rosario, tiene acceso directo al paseo ribereño del Paraná y está a 4 km del Monumento Histórico Nacional a la Bandera.</p>
 
@@ -47,7 +59,7 @@
                 
             <p>El desayuno y el estacionamiento son gratuitos. Otros servicios incluyen un pub, un gimnasio, una piscina cubierta y una terraza en la azotea con tina y vista al río.</p>
 
-            <img src="./assets/img/hoteles/urquiza.jpg" alt="Fotografia del frente del hotel Urquiza Apart Hotel & Suites, Rosario." class="place-img">
+            <img src="./assets/img/hoteles/urquiza.jpg" alt="Fotografia del frente del hotel Urquiza Apart Hotel & Suites, Rosario." class="place-img rounded">
             <h2>Urquiza Apart Hotel & Suites</h2>
             <p>Este hotel de suites informal en un edificio de varios pisos se encuentra a 14 minutos a pie del río Paraná y a 3 km de los eventos deportivos en el estadio Marcelo Bielsa y del Museo Municipal de Bellas Artes Juan B. Castagnino.</p>
                 
@@ -56,8 +68,17 @@
             <p>El desayuno tipo bufé se sirve en un restobar de moda, que cuenta con obras de arte moderno. Hay un gimnasio y una terraza en la azotea con piscina al aire libre. Se ofrece estacionamiento cubierto por una tarifa adicional.</p>
         </main>
 
-        <footer class="footer">
+        <!-- Footer / Pie de página -->
+        <!-- NOTA: Quise hacer un formulario de contacto (Para aprovechar más el bootstrap y darle más contenido al proyecto) en el pie de cada página, pero no sabía como hacer para que los datos del formulario se envien a un email... por ende no lo veía como un aporte al proyecto :( -->
+        <footer class="footer col-xs-12 col-sm-10 col-md-8 col-xl-6">
+            <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+
+            <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+
             Creado con ♥ por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-
         </footer>
+
+        <!-- Script para aplicar Bootstrap -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
