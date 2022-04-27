@@ -109,6 +109,11 @@ h2 {
         max-width: 10%;
     }
 
+    .header__Logo:hover {
+        animation-name: rotLogo;
+        animation-duration: 2s;
+    }
+
     /* Galeria responsive */
 	.gallery-container {
 		grid-template-columns: repeat(5, 1fr);
@@ -153,4 +158,11 @@ h2 {
 	.gallery-container {
 		grid-template-columns: repeat(3, 1fr);
 	}
+}
+
+/* Animación del logo */
+@keyframes rotLogo {
+    50% {
+        transform: rotate(360deg);
+    }
 }
