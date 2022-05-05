@@ -1,0 +1,138 @@
+@import "_variables";
+@import "_breakpoints";
+@import "_header";
+@import "_footer";
+
+/* Elemento global / Global element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 0; /* No le aplica bien el padding 0 a los UL porque Bootstrap le aplica un padding-left a los UL */
+    margin-bottom: 0; /* Lo mismo... Bootstrap me ignora el margin 0 global */
+}
+
+a, a:hover {
+    color: $linksColor;
+    text-decoration: none;
+
+    /* Bootstrap me aplica un color al realizar hover en una etiqueta A, asi que vuelvo a dejarle el mismo color */
+}
+
+/* Body / Cuerpo de la pagina */
+body {
+    background: linear-gradient(rgb(230, 230, 230), rgb(180, 180, 180));
+}
+
+/* Texts / Textos */
+.primaryInfo {
+    padding: 8px 0 0 5px;
+
+    h1 {
+        font-family: $titleFont;
+        color: $titleColor;
+        margin: 0;
+    }
+
+    i {
+        padding-left: 7px;
+    }
+}
+
+.secondaryInfo {
+    padding: 0 0 0 8px;
+
+    h2 {
+        font-family: $titleFont;
+        color: $titleColor;
+        margin: 0;
+    }
+    i {
+        padding-left: 7px;
+    }
+}
+
+/* Imagenes del carrusel del index */
+.carousel {
+    padding-top: 10px;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Cards presentation / Presentación de cartas */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.90);
+    color:#FFF;
+    text-align: center;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.40);
+    @include BkS {
+        width: 100%;
+    }
+    @include BkM {
+        width: 400px;
+    }
+}
+
+.card-title h2 {
+    color: $cardHighlight;
+    padding-top: 10px;
+    font-family: $titleFont;
+}
+
+.card-img img {
+    position: relative;
+    width: 95%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.card-dir {
+    color: $cardHighlight;
+    text-transform: uppercase;
+}
+
+/* Map / Mapa */
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.90);
+    border-radius: 20px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.40);
+    width: 620px;
+    height: 470px;
+    margin: 10px 0 0 10px;
+
+    @include BkS {
+        width: 100%;
+    }
+
+    iframe {
+        border-radius: 20px;
+    }
+}
+
+/* Animación del logo */
+@keyframes rotLogo {
+    50% {
+        transform: rotate(360deg);
+    }
+}

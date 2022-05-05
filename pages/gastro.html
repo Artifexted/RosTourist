@@ -20,27 +20,30 @@
     <body>
         <!-- Header / Cabecera -->
         <header class="header">
+            <!-- Logo -->
+            <div class="header__Logo">
+                <img src="../assets/img/logo.png" alt="Logotipo de RosTourist">
+            </div>
+            
             <!-- NavBar / Barra de navegación -->
             <nav class="header__Navbar">
                 <ul>
-                    <!-- Logo -->
-                    <img src="../assets/img/logo.png" alt="Logotipo de RosTourist" class="header__Logo">
-
                     <!-- Pages / Paginas -->
-                    <a href="../index.html"><li>INICIO</li></a>
-                    <a href="./gastro.html"><li>BARES/RESTAURANTES</li></a>
-                    <a href="./lugares.html"><li>LUGARES PARA VISITAR</li></a>
-                    <a href="./hoteles.html"><li>HOTELES</li></a>
-                    <a href="./mapa.html"><li>MAPA</li></a>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="./gastro.html">RESTAURANTES</a></li>
+                    <li><a href="./lugares.html">PARA VISITAR</a></li>
+                    <li><a href="./hoteles.html">HOTELES</a></li>
+                    <li><a href="./mapa.html">MAPA</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Main / Contenido principal -->
         <main class="main">
-            <!-- Agregamos la clase "rounded" de Bootstrap a las imagenes ^.^ -->
-            <h1>RosTourist: Bares y Restaurantes</h1>
-            <p class="primaryText">¿No sabes a donde ir a comer o tomar algo? Te lo facilitamos ;)</p>
+            <div class="primaryInfo">
+                <h1>RosTourist: Bares y Restaurantes</h1>
+                <p>¿No sabes a donde ir a comer o tomar algo? Te lo facilitamos ;)</p>
+            </div>
 
             <!-- Cartas para las presentaciones; Gracias por la sugerencia Rodri! -->
             <div class="cards-container">
@@ -53,7 +56,7 @@
                     </div>
                     <div class="card-text">
                         <p>Gran variedad de tragos. Precios accesibles. Abierto las 24hs.</p>
-                        <p>Ubicado en Av. Pellegrini 1824</p>
+                        <p>Dirección: <span class="card-dir">Av. Pellegrini 1824</span></p>
                     </div>
                 </div>
 
@@ -66,7 +69,7 @@
                     </div>
                     <div class="card-text">
                         <p>Lugar para cenar con un ambiente muy tranquilo e iluminado. Renovado recientemente.</p>
-                        <p>Ubicado en Bv. Oroño 199</p>
+                        <p>Dirección: <span class="card-dir">Bv. Oroño 199</span></p>
                     </div>
                 </div>
 
@@ -79,7 +82,7 @@
                     </div>
                     <div class="card-text">
                         <p>Amplia variedad de comida en su carta (TAMBIÉN OPCIONES VEGANAS Y SIN TACC). Especial para ir con acompañantes.</p>
-                        <p>Ubicado en Av. Pellegrini 1590</p>
+                        <p>Dirección: <span class="card-dir">Av. Pellegrini 1590</span></p>
                     </div>
                 </div>
             </div>
@@ -92,7 +95,7 @@
 
             <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
 
-            Creado con ♥ por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-
+            <p>Creado por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-</p>
         </footer>
 
         <!-- Script para aplicar Bootstrap -->

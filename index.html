@@ -14,82 +14,85 @@
         <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
 
         <!-- Hojas de estilo (Bootstrap y propia. Ordenados para que el Bootstrap no afecte a la mía) -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <!-- Header / Cabecera -->
         <header class="header">
+            <!-- Logo -->
+            <div class="header__Logo">
+                <img src="./assets/img/logo.png" alt="Logotipo de RosTourist">
+            </div>
+            
             <!-- NavBar / Barra de navegación -->
             <nav class="header__Navbar">
                 <ul>
-                    <!-- Logo -->
-                    <img src="./assets/img/logo.png" alt="Logotipo de RosTourist" class="header__Logo">
-
                     <!-- Pages / Paginas -->
-                    <a href="./index.html"><li>INICIO</li></a>
-                    <a href="./pages/gastro.html"><li>BARES/RESTAURANTES</li></a>
-                    <a href="./pages/lugares.html"><li>LUGARES PARA VISITAR</li></a>
-                    <a href="./pages/hoteles.html"><li>HOTELES</li></a>
-                    <a href="./pages/mapa.html"><li>MAPA</li></a>
+                    <li><a href="./index.html">INICIO</a></li>
+                    <li><a href="./pages/gastro.html">RESTAURANTES</a></li>
+                    <li><a href="./pages/lugares.html">PARA VISITAR</a></li>
+                    <li><a href="./pages/hoteles.html">HOTELES</a></li>
+                    <li><a href="./pages/mapa.html">MAPA</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Main / Contenido principal -->
         <main class="main">
-            <h1>RosTourist</h1>
-            <i>El turismo de Rosario</i>
+            <div class="primaryInfo">
+                <h1>RosTourist</h1>
+                <i>El turismo de Rosario</i>
+                <p>¿Querés venir a conocer Rosario y no sabes por donde empezar? Acá te dejamos una guía turistica de todo lo que te podes llegar a encontrar en la ciudad</p>
+            </div>
 
-            <p class="primaryText">¿Querés venir a conocer Rosario y no sabes por donde empezar? Acá te dejamos una guía turistica de todo lo que te podes llegar a encontrar en la ciudad</p>
+            <div class="secondaryInfo">
+                <h2>Rosario: La cuna de la bandera</h2>
+                <i>Acá te mostramos algunas imagenes para enamorarte de la ciudad</i>
+            </div>
 
-            <h2>Rosario: La cuna de la bandera</h2>
-            <i>Acá te mostramos algunas imagenes para enamorarte de la ciudad ♥</i>
+            <!-- Bootstrap 5: Carrusel de imagenes de Rosario -->
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/muestra/escal_pe.jpg" alt="Fotografia de las escalinatas del Parque España, Rosario." class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/monu2.jpg" alt="Fotografia del monumento a la bandera, Rosario." class="d-block w-100"> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/pi1.jpg" alt="Fotografia del Parque Independencia, Rosario." class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/pi2.jpg" alt="Fotografia del Parque Independencia, Rosario." class="d-block w-100"> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/puente_rv.jpg" alt="Fotografia del puente de Rosario a Victoria, Rosario." class="d-block w-100"> 
+                    </div>
+                </div>
 
-
-            <!-- Galeria de imagenes al azar de la ciudad -->
-            <div class="gallery-container">
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/escal_pe.jpg" alt="Fotografia de las escalinatas del Parque España, Rosario." class="gallery__img rounded">
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/monu1.jpg" alt="Fotografia del monumento a la bandera, Rosario." class="gallery__img rounded"> 
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/monu2.jpg" alt="Fotografia del monumento a la bandera, Rosario." class="gallery__img rounded"> 
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/pi1.jpg" alt="Fotografia del Parque Independencia, Rosario." class="gallery__img rounded">
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/pi2.jpg" alt="Fotografia del Parque Independencia, Rosario." class="gallery__img rounded"> 
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/silos.jpg" alt="Fotografia de los silos, Museo de Arte Contemporáneo, Rosario." class="gallery__img rounded"> 
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/cuatro_pla.jpg" alt="Fotografia de las cuatro plazas durante epocas navideñas, Rosario." class="gallery__img rounded">
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/rosario.jpg" alt="Fotografia del nuevo cartel junto al río indicando el nombre de la ciudad, Rosario." class="gallery__img rounded"> 
-                </div>
-                <div class="gallery__item">
-                    <img src="./assets/img/muestra/puente_rv.jpg" alt="Fotografia del puente de Rosario a Victoria, Rosario." class="gallery__img rounded"> 
-                </div>
+                <!-- Controles del Carrusel de imagenes -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </main>
 
         <!-- Footer / Pie de página -->
-        <!-- NOTA: Quise hacer un formulario de contacto (Para aprovechar más el bootstrap y darle más contenido al proyecto) en el pie de cada página, pero no sabía como hacer para que los datos del formulario se envien a un email... por ende no lo veía como un aporte al proyecto :( -->
         <footer class="footer col-xs-12">
             <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
 
             <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
 
-            Creado con ♥ por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-
+            <p>Creado por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-</p>
         </footer>
 
         <!-- Script para aplicar Bootstrap -->
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

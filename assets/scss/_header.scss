@@ -1,0 +1,45 @@
+/* Header / Cabecera */
+.header {
+    width: 100%;
+    background-color: #000;
+
+    @include BkS {
+        text-align: center;
+    }
+    @include BkM {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Logo */
+.header__Logo img {
+    width: 120px;
+    margin-left: 8px;
+}
+
+.header__Logo:hover {
+    animation-name: rotLogo;
+    animation-duration: 2s;
+}
+
+/* Navbar / Barra de navegación */
+.header__Navbar {
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+.header__Navbar ul {
+    @include BkM {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        margin-inline: 20px;
+    }
+
+    li:hover {
+        text-shadow: rgba(255, 255, 255, 0.7) 1px 1px;
+    }
+}

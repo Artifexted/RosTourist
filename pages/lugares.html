@@ -20,28 +20,30 @@
     <body>
         <!-- Header / Cabecera -->
         <header class="header">
+            <!-- Logo -->
+            <div class="header__Logo">
+                <img src="../assets/img/logo.png" alt="Logotipo de RosTourist">
+            </div>
+            
             <!-- NavBar / Barra de navegación -->
             <nav class="header__Navbar">
                 <ul>
-                    <!-- Logo -->
-                    <img src="../assets/img/logo.png" alt="Logotipo de RosTourist" class="header__Logo">
-
                     <!-- Pages / Paginas -->
-                    <a href="../index.html"><li>INICIO</li></a>
-                    <a href="./gastro.html"><li>BARES/RESTAURANTES</li></a>
-                    <a href="./lugares.html"><li>LUGARES PARA VISITAR</li></a>
-                    <a href="./hoteles.html"><li>HOTELES</li></a>
-                    <a href="./mapa.html"><li>MAPA</li></a>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="./gastro.html">RESTAURANTES</a></li>
+                    <li><a href="./lugares.html">PARA VISITAR</a></li>
+                    <li><a href="./hoteles.html">HOTELES</a></li>
+                    <li><a href="./mapa.html">MAPA</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Main / Contenido principal -->
         <main class="main">
-            <!-- Agregamos la clase "rounded" de Bootstrap a las imagenes ^.^ -->
-
-            <h1>RosTourist: Lugares para visitar</h1>
-            <p class="primaryText">Acá te dejamos una lista de los lugares más icónicos de la ciudad que no te pueden faltar en tu visita!</p>
+            <div class="primaryInfo">
+                <h1>RosTourist: Lugares para visitar</h1>
+                <p>Acá te dejamos una lista de los lugares más icónicos de la ciudad que no te pueden faltar en tu visita!</p>
+            </div>
 
             <div class="cards-container">
                 <div class="card">
@@ -89,7 +91,7 @@
 
             <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
 
-            Creado con ♥ por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-
+            <p>Creado por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-</p>
         </footer>
 
         <!-- Script para aplicar Bootstrap -->
