@@ -5,16 +5,16 @@
 
 /* Elemento global / Global element */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: map-get($reset, margen);
+    padding: map-get($reset, pad);
+    box-sizing: map-get($reset, box-sz);
 }
 
 ul {
-    padding-left: 0; /* No le aplica bien el padding 0 a los UL porque Bootstrap le aplica un padding-left a los UL */
-    margin-bottom: 0; /* Lo mismo... Bootstrap me ignora el margin 0 global */
+    @extend *;
 }
 
+/* Duda: Lo que hice en a, a:hover no sería lo mismo que usar extend? Qué es mejor y por qué? */
 a, a:hover {
     color: $linksColor;
     text-decoration: none;
@@ -110,23 +110,20 @@ body {
 }
 
 /* Map / Mapa */
-.map {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.90);
-    border-radius: 20px;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.40);
-    width: 620px;
-    height: 470px;
-    margin: 10px 0 0 10px;
+.map, .map iframe {
+    margin: 10px 0 0 15px;
+    width: 600px;
+    height: 450px;
+
+    iframe {
+        border: 5px solid rgba(0, 0, 0, 0.90);
+        border-radius: 10px;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.40);
+    }
 
     @include BkS {
         width: 100%;
-    }
-
-    iframe {
-        border-radius: 20px;
+        margin: 0;
     }
 }
 

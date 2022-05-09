@@ -79,20 +79,14 @@
 }
 
 /* Elemento global / Global element */
-* {
+*, ul {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-ul {
-  padding-left: 0;
-  /* No le aplica bien el padding 0 a los UL porque Bootstrap le aplica un padding-left a los UL */
-  margin-bottom: 0;
-  /* Lo mismo... Bootstrap me ignora el margin 0 global */
-}
-
+/* Duda: Lo que hice en a, a:hover no sería lo mismo que usar extend? Qué es mejor y por qué? */
 a, a:hover {
   color: #FFF;
   text-decoration: none;
@@ -202,33 +196,24 @@ body {
 }
 
 /* Map / Mapa */
-.map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 20px;
+.map, .map iframe {
+  margin: 10px 0 0 15px;
+  width: 600px;
+  height: 450px;
+}
+
+.map iframe, .map iframe iframe {
+  border: 5px solid rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
   -webkit-box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
           box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
-  width: 620px;
-  height: 470px;
-  margin: 10px 0 0 10px;
 }
 
 @media screen and (max-width: 719px) {
-  .map {
+  .map, .map iframe {
     width: 100%;
+    margin: 0;
   }
-}
-
-.map iframe {
-  border-radius: 20px;
 }
 
 /* Animación del logo */
