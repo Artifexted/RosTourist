@@ -13,8 +13,8 @@
     right: 0;
     top: 0;
     opacity: 0;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
   }
   .header .menuHamb_Open, .header .menuHamb_Close {
     display: block;
@@ -25,7 +25,7 @@
     pointer-events: none;
   }
   .header .menuHamb_Open img, .header .menuHamb_Close img {
-    height: 50px;
+    height: 45px;
   }
   .header .navbar-Opt {
     display: none;
