@@ -1,24 +1,54 @@
 @charset "UTF-8";
 /* Header / Cabecera */
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   background-color: #000;
 }
-
 @media screen and (max-width: 719px) {
-  .header {
-    text-align: center;
+  .header input[type=checkbox] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+  }
+  .header .menuHamb_Open, .header .menuHamb_Close {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    top: 0;
+    pointer-events: none;
+  }
+  .header .menuHamb_Open img, .header .menuHamb_Close img {
+    height: 50px;
+  }
+  .header .navbar-Opt {
+    display: none;
+  }
+  .header input:checked ~ .navbar-Opt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header input:checked ~ .menuHamb_Open {
+    display: none;
+  }
+  .header input:not(:checked) ~ .menuHamb_Close {
+    display: none;
   }
 }
-
 @media screen and (min-width: 720px) {
   .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
+  }
+  .header .menuHamb_Open, .header .menuHamb_Close, .header input[type=checkbox] {
+    display: none;
   }
 }
 
@@ -28,53 +58,75 @@
   margin-left: 8px;
 }
 
-.header__Logo:hover {
-  -webkit-animation-name: rotLogo;
-          animation-name: rotLogo;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+@media screen and (min-width: 720px) {
+  .header__Logo:hover {
+    animation-name: rotLogo;
+    animation-duration: 2s;
+  }
 }
 
 /* Navbar / Barra de navegación */
-.header__Navbar {
-  margin-left: auto;
-  margin-right: 3px;
+@media screen and (min-width: 720px) {
+  .header__Navbar {
+    margin-left: auto;
+    margin-right: 3px;
+  }
 }
 
 @media screen and (min-width: 720px) {
   .header__Navbar ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 .header__Navbar ul li {
   list-style: none;
   margin-inline: 20px;
 }
-
 .header__Navbar ul li:hover {
   text-shadow: rgba(255, 255, 255, 0.7) 1px 1px;
 }
 
 /* Footer / Pie de Pagina */
 .footer {
-  padding-top: 30px;
+  margin-top: auto;
+  padding-top: 15px;
   text-align: center;
+  /* Contenedor de las 2 secciones que separé dentro del footer */
+  /* Elemento P (parrafo) del píe de pagina */
 }
-
-.footer .btn {
-  display: block;
+.footer__Align {
+  display: inline-flex;
+  /* Parte izquierda del footer */
+  /* Parte derecha del footer */
+}
+.footer__Align-Left {
+  width: 50%;
+  border-right: 1px solid #000;
+}
+.footer__Align-Left .btn {
   text-transform: uppercase;
+  width: 150px;
 }
-
-.footer a {
-  text-decoration: none;
+.footer__Align-Right {
+  width: 50%;
+  border-left: 1px solid #000;
+  /* Logos de las redes sociales */
 }
-
-.me, .me:hover {
-  color: #008d00;
+.footer__Align-Right .socialLogo {
+  width: 36px;
+  transition: filter 1.5s;
+  filter: brightness(85%);
+  /* Efecto de brillo al pasar el cursor por el logo de la red social */
+}
+.footer__Align-Right .socialLogo:hover {
+  filter: brightness(110%);
+}
+.footer p {
+  margin: 0;
+  /* Enlace (elemento A) hacia mi cuenta de Instagram */
+}
+.footer p .me, .footer p .me:hover {
+  color: rgb(0, 141, 0);
   font-weight: bold;
 }
 
@@ -82,8 +134,7 @@
 *, ul {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Duda: Lo que hice en a, a:hover no sería lo mismo que usar extend? Qué es mejor y por qué? */
@@ -95,21 +146,21 @@ a, a:hover {
 
 /* Body / Cuerpo de la pagina */
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#b4b4b4));
-  background: linear-gradient(#e6e6e6, #b4b4b4);
+  background: linear-gradient(rgb(230, 230, 230), rgb(180, 180, 180));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Texts / Textos */
 .primaryInfo {
   padding: 8px 0 0 5px;
 }
-
 .primaryInfo h1 {
   font-family: impact;
   color: #3B4275;
-  margin: 0;
+  margin: 50px 0 0 0;
 }
-
 .primaryInfo i {
   padding-left: 7px;
 }
@@ -117,13 +168,11 @@ body {
 .secondaryInfo {
   padding: 0 0 0 8px;
 }
-
 .secondaryInfo h2 {
   font-family: impact;
   color: #3B4275;
   margin: 0;
 }
-
 .secondaryInfo i {
   padding-left: 7px;
 }
@@ -131,41 +180,52 @@ body {
 /* Imagenes del carrusel del index */
 .carousel {
   padding-top: 10px;
+  max-width: 1900px;
+  margin-inline: auto;
 }
 
 .carousel-item img {
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+@media screen and (max-width: 719px) {
+  .carousel-item img {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .carousel-item img {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel-item img {
+    height: 650px;
+  }
 }
 
 /* Cards presentation / Presentación de cartas */
 .cards-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #FFF;
   text-align: center;
   margin-bottom: 35px;
   border-radius: 20px;
-  -webkit-box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 1.5s;
 }
-
+.card:hover {
+  background-color: rgb(0, 0, 0);
+}
 @media screen and (max-width: 719px) {
   .card {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 720px) {
   .card {
     width: 400px;
@@ -173,7 +233,7 @@ body {
 }
 
 .card-title h2 {
-  color: #ade8ff;
+  color: rgb(173, 232, 255);
   padding-top: 10px;
   font-family: impact;
 }
@@ -182,8 +242,7 @@ body {
   position: relative;
   width: 95%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .card-text {
@@ -191,41 +250,36 @@ body {
 }
 
 .card-dir {
-  color: #ade8ff;
+  color: rgb(173, 232, 255);
   text-transform: uppercase;
 }
 
 /* Map / Mapa */
-.map, .map iframe {
-  margin: 10px 0 0 15px;
-  width: 600px;
-  height: 450px;
+.map {
+  margin: 10px 0 0 0;
+  width: 100%;
 }
-
-.map iframe, .map iframe iframe {
-  border: 5px solid rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
-  -webkit-box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
-}
-
 @media screen and (max-width: 719px) {
-  .map, .map iframe {
-    width: 100%;
-    margin: 0;
+  .map {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .map {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .map {
+    height: 600px;
   }
 }
 
 /* Animación del logo */
-@-webkit-keyframes rotLogo {
-  50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 @keyframes rotLogo {
   50% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=style.css.map */

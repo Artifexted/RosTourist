@@ -1,14 +1,60 @@
 /* Header / Cabecera */
 .header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     width: 100%;
     background-color: #000;
 
     @include BkS {
-        text-align: center;
+        input[type="checkbox"] {
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .menuHamb_Open, .menuHamb_Close {
+            display: block;
+            position: absolute;
+            right: 0;
+            margin-right: 0;
+            top: 0;
+            pointer-events: none;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        .navbar-Opt {
+            display: none;
+        }
+
+        input:checked ~ .navbar-Opt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input:checked ~ .menuHamb_Open {
+            display: none;
+        }
+
+        input:not(:checked) ~ .menuHamb_Close {
+            display: none;
+        }
     }
+
     @include BkM {
         display: flex;
         align-items: center;
+
+        .menuHamb_Open, .menuHamb_Close, input[type=checkbox] {
+            display: none;
+        }
     }
 }
 
@@ -19,14 +65,18 @@
 }
 
 .header__Logo:hover {
-    animation-name: rotLogo;
-    animation-duration: 2s;
+    @include BkM {
+        animation-name: rotLogo;
+        animation-duration: 2s;
+    }
 }
 
 /* Navbar / Barra de navegación */
 .header__Navbar {
-    margin-left: auto;
-    margin-right: 3px;
+    @include BkM {
+        margin-left: auto;
+        margin-right: 3px;
+    }
 }
 
 .header__Navbar ul {

@@ -1,0 +1,21 @@
+{
+  "name": "rostourist",
+  "version": "1.0.0",
+  "description": "\"Adapté mejor el mapa para celulares\"\r \"Incluí un uso meramente de ejemplo de SASS con map y extend\"\r \"Agregué SEO a las 5 paginas\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass --watch assets/scss/style.scss assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguslu0/RosTourist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aguslu0/RosTourist/issues"
+  },
+  "homepage": "https://github.com/aguslu0/RosTourist#readme"
+}

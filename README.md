@@ -1,3 +1,14 @@
-"Adapté mejor el mapa para celulares"
-"Incluí un uso meramente de ejemplo de SASS con map y extend"
-"Agregué SEO a las 5 paginas"
+# RosTourist #
+
+## Descripción ##
+Es una pagina cuya función es ser guía de turismo para la ciudad de Rosario (Santa Fe, Argentina).
+
+## Deploy ##
+Podés ver la página funcionando desde [aquí](https://aguslu0.github.io/RosTourist/)
+
+## Construido con ##
+* HTML
+* SASS/CSS
+
+## Librerías ##
+* [Bootstrap v5.1.3](https://getbootstrap.com/)

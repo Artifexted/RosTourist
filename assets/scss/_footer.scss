@@ -1,19 +1,51 @@
 /* Footer / Pie de Pagina */
 .footer {
-    padding-top: 30px;
+    margin-top: auto;
+    padding-top: 15px;
     text-align: center;
-}
 
-.footer .btn {
-    display: block;
-    text-transform: uppercase;
-}
+    /* Contenedor de las 2 secciones que separé dentro del footer */
+    &__Align {
+        display: inline-flex;
 
-.footer a {
-    text-decoration: none;
-}
+        /* Parte izquierda del footer */
+        &-Left {
+            width: 50%;
+            border-right: 1px solid #000;
 
-.me, .me:hover {
-    color: rgb(0, 141, 0);
-    font-weight: bold;
+            .btn {
+                text-transform: uppercase;
+                width: 150px;
+            }
+        }
+        
+        /* Parte derecha del footer */
+        &-Right {
+            width: 50%;
+            border-left: 1px solid #000;
+
+            /* Logos de las redes sociales */
+            .socialLogo {
+                width: 36px;
+                transition: filter 1.5s;
+                filter: brightness(85%);
+
+                /* Efecto de brillo al pasar el cursor por el logo de la red social */
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+        }
+    }
+
+    /* Elemento P (parrafo) del píe de pagina */
+    p {
+        margin: 0;
+
+        /* Enlace (elemento A) hacia mi cuenta de Instagram */
+        .me, .me:hover {
+            color: rgb(0, 141, 0);
+            font-weight: bold;
+        }
+    }
 }

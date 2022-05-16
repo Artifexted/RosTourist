@@ -33,12 +33,17 @@
             <!-- NavBar / Barra de navegación -->
             <nav class="header__Navbar">
                 <ul>
+                    <!-- "Menu Hamburguesa" para vistas pequeñas -->
+                    <input type="checkbox">
+                    <li class="menuHamb_Open"><img src="../assets/img/openMenu.png" alt="Abrir menú hamb para vistas chicas"></li>
+                    <li class="menuHamb_Close"><img src="../assets/img/closeMenu.png" alt="Cerrar menú hamb para vistas chicas"></li>
+
                     <!-- Pages / Paginas -->
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="./gastro.html">RESTAURANTES</a></li>
-                    <li><a href="./lugares.html">PARA VISITAR</a></li>
-                    <li><a href="./hoteles.html">HOTELES</a></li>
-                    <li><a href="./mapa.html">MAPA</a></li>
+                    <li class="navbar-Opt"><a href="../index.html">INICIO</a></li>
+                    <li class="navbar-Opt"><a href="./gastro.html">RESTAURANTES</a></li>
+                    <li class="navbar-Opt"><a href="./lugares.html">PARA VISITAR</a></li>
+                    <li class="navbar-Opt"><a href="./hoteles.html">HOTELES</a></li>
+                    <li class="navbar-Opt"><a href="./mapa.html">MAPA</a></li>
                 </ul>
             </nav>
         </header>
@@ -90,11 +95,26 @@
         </main>
 
         <!-- Footer / Pie de página -->
-        <!-- NOTA: Quise hacer un formulario de contacto (Para aprovechar más el bootstrap y darle más contenido al proyecto) en el pie de cada página, pero no sabía como hacer para que los datos del formulario se envien a un email... por ende no lo veía como un aporte al proyecto :( -->
-        <footer class="footer col-xs-12">
-            <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+        <footer class="footer">
+            
+            <!-- Div contenedor de las 2 secciones del footer -->
+            <div class="footer__Align">
 
-            <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+                <!-- Parte izquierda del footer -->
+                <div class="footer__Align-Left">
+                    <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+
+                    <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+                </div>
+
+                <!-- Parte derecha del footer -->
+                <div class="footer__Align-Right">
+                    <h3>Visitanos en nuestras redes!</h3>
+                    
+                    <a href="#"><img src="../assets/img/social/ig.png" alt="Logotipo de Instagram" class="socialLogo"></a>
+                    <a href="#"><img src="../assets/img/social/fb.png" alt="Logotipo de Facebook" class="socialLogo"></a>
+                </div>
+            </div>
 
             <p>Creado por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-</p>
         </footer>

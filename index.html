@@ -32,12 +32,17 @@
             <!-- NavBar / Barra de navegación -->
             <nav class="header__Navbar">
                 <ul>
+                    <!-- "Menu Hamburguesa" para vistas pequeñas -->
+                    <input type="checkbox">
+                    <li class="menuHamb_Open"><img src="./assets/img/openMenu.png" alt="Abrir menú hamb para vistas chicas"></li>
+                    <li class="menuHamb_Close"><img src="./assets/img/closeMenu.png" alt="Cerrar menú hamb para vistas chicas"></li>
+
                     <!-- Pages / Paginas -->
-                    <li><a href="./index.html">INICIO</a></li>
-                    <li><a href="./pages/gastro.html">RESTAURANTES</a></li>
-                    <li><a href="./pages/lugares.html">PARA VISITAR</a></li>
-                    <li><a href="./pages/hoteles.html">HOTELES</a></li>
-                    <li><a href="./pages/mapa.html">MAPA</a></li>
+                    <li class="navbar-Opt"><a href="./index.html">INICIO</a></li>
+                    <li class="navbar-Opt"><a href="./pages/gastro.html">RESTAURANTES</a></li>
+                    <li class="navbar-Opt"><a href="./pages/lugares.html">PARA VISITAR</a></li>
+                    <li class="navbar-Opt"><a href="./pages/hoteles.html">HOTELES</a></li>
+                    <li class="navbar-Opt"><a href="./pages/mapa.html">MAPA</a></li>
                 </ul>
             </nav>
         </header>
@@ -59,19 +64,28 @@
             <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./assets/img/muestra/escal_pe.jpg" alt="Fotografia de las escalinatas del Parque España, Rosario." class="d-block w-100">
+                        <img src="./assets/img/muestra/muestra_monu.jpg" alt="Fotografia del Monumento a la Bandera Argentina, Rosario." class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/muestra/monu2.jpg" alt="Fotografia del monumento a la bandera, Rosario." class="d-block w-100"> 
+                        <img src="./assets/img/muestra/muestra_panor1.jpg" alt="Fotografia panoramica de Rosario desde arriba, Rosario." class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/muestra/pi1.jpg" alt="Fotografia del Parque Independencia, Rosario." class="d-block w-100">
+                        <img src="./assets/img/muestra/muestra_panor2.jpg" alt="Fotografia panoramica de Rosario desde arriba, Rosario." class="d-block w-100">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/muestra/pi2.jpg" alt="Fotografia del Parque Independencia, Rosario." class="d-block w-100"> 
+                        <img src="./assets/img/muestra/muestra_pe.jpg" alt="Fotografia de las escalinatas del Parque España, Rosario." class="d-block w-100"> 
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/img/muestra/puente_rv.jpg" alt="Fotografia del puente de Rosario a Victoria, Rosario." class="d-block w-100"> 
+                        <img src="./assets/img/muestra/muestra_peatonal.jpg" alt="Fotografia de la peatonal Cordoba, Rosario." class="d-block w-100"> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/muestra_pi.jpg" alt="Fotografia de una parte del Parque Independencia, Rosario." class="d-block w-100"> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/muestra_puente.jpg" alt="Fotografia del puente de Rosario a Victoria, Rosario." class="d-block w-100"> 
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/muestra/muestra_silos.jpg" alt="Fotografia de los iconicos silos, Rosario." class="d-block w-100"> 
                     </div>
                 </div>
 
@@ -88,10 +102,26 @@
         </main>
 
         <!-- Footer / Pie de página -->
-        <footer class="footer col-xs-12">
-            <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+        <footer class="footer">
+            
+            <!-- Div contenedor de las 2 secciones del footer -->
+            <div class="footer__Align">
 
-            <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+                <!-- Parte izquierda del footer -->
+                <div class="footer__Align-Left">
+                    <h3>¿Necesitas soporte personalizado? <small class="text-muted">¡Contactanos!</small></h3>
+
+                    <a href="mailto:artifexted@gmail.com?Subject=RosTourist"><div type="button" class="btn btn-dark">Enviar Correo</div></a>
+                </div>
+
+                <!-- Parte derecha del footer -->
+                <div class="footer__Align-Right">
+                    <h3>Visitanos en nuestras redes!</h3>
+                    
+                    <a href="#"><img src="./assets/img/social/ig.png" alt="Logotipo de Instagram" class="socialLogo"></a>
+                    <a href="#"><img src="./assets/img/social/fb.png" alt="Logotipo de Facebook" class="socialLogo"></a>
+                </div>
+            </div>
 
             <p>Creado por <a href="https://instagram.com/artifexted" class="me">ATFX</a>.-</p>
         </footer>
