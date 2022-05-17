@@ -1,0 +1,27 @@
+/* Texts / Textos */
+.primaryInfo {
+    padding: 8px 0 0 5px;
+
+    h1 {
+        font-family: $titleFont;
+        color: $titleColor;
+        margin: 50px 0 0 0;
+    }
+
+    i {
+        padding-left: 7px;
+    }
+}
+
+.secondaryInfo {
+    padding: 0 0 0 8px;
+
+    h2 {
+        font-family: $titleFont;
+        color: $titleColor;
+        margin: 0;
+    }
+    i {
+        padding-left: 7px;
+    }
+}

@@ -1,0 +1,14 @@
+/* Etiqueta A (Enlaces) */
+a, a:hover {
+    color: $linksColor;
+    text-decoration: none;
+}
+
+/* Body / Cuerpo de la pagina */
+body {
+    background: linear-gradient(rgb(230, 230, 230), rgb(180, 180, 180));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100vh;
+}

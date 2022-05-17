@@ -58,20 +58,20 @@
     }
 }
 
-/* Logo */
+/* Logo y Navbar */
 .header__Logo img {
     width: 120px;
     margin-left: 8px;
 }
 
-.header__Logo:hover {
+.header__Logo:hover, .navbar-Opt:hover {
     @include BkM {
-        animation-name: rotLogo;
+        animation-name: kfScale;
         animation-duration: 2s;
+        animation-iteration-count: infinite;
     }
 }
 
-/* Navbar / Barra de navegación */
 .header__Navbar {
     @include BkM {
         margin-left: auto;
@@ -87,9 +87,5 @@
     li {
         list-style: none;
         margin-inline: 20px;
-    }
-
-    li:hover {
-        text-shadow: rgba(255, 255, 255, 0.7) 1px 1px;
     }
 }

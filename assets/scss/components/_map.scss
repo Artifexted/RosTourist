@@ -1,0 +1,15 @@
+/* Map / Mapa */
+.map {
+    margin: 10px 0 0 0;
+    width: 100%;
+
+    @include BkS {
+        height: 350px;
+    }
+    @include BkM {
+        height: 450px;
+    }
+    @include BkL {
+        height: 600px;
+    }
+}

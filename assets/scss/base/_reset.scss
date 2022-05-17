@@ -1,0 +1,6 @@
+/* Elemento global / Global element */
+*, ul {
+    margin: map-get($reset, margen);
+    padding: map-get($reset, pad);
+    box-sizing: map-get($reset, box-sz);
+}

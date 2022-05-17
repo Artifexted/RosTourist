@@ -1,0 +1,20 @@
+/* Imagenes del carrusel del index */
+.carousel {
+    padding-top: 10px;
+    max-width: 1900px;
+    margin-inline: auto;
+}
+
+.carousel-item img {
+    object-fit: cover;
+
+    @include BkS {
+        height: 350px;
+    }
+    @include BkM {
+        height: 500px;
+    }
+    @include BkL {
+        height: 650px;
+    }
+}
