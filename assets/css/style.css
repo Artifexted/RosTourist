@@ -6,11 +6,10 @@
   box-sizing: border-box;
 }
 
-/* Duda: Lo que hice en a, a:hover no sería lo mismo que usar extend? Qué es mejor y por qué? */
+/* Etiqueta A (Enlaces) */
 a, a:hover {
   color: #FFF;
   text-decoration: none;
-  /* Bootstrap me aplica un color al realizar hover en una etiqueta A, asi que vuelvo a dejarle el mismo color */
 }
 
 /* Body / Cuerpo de la pagina */
@@ -19,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 /* Header / Cabecera */
