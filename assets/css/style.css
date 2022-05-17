@@ -14,7 +14,7 @@ a, a:hover {
 
 /* Body / Cuerpo de la pagina */
 body {
-  background: linear-gradient(rgb(230, 230, 230), rgb(180, 180, 180));
+  background-color: rgb(215, 215, 215);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,6 +110,8 @@ body {
   margin-top: auto;
   padding-top: 15px;
   text-align: center;
+  background: linear-gradient(rgb(49, 49, 49), rgb(0, 0, 0));
+  color: #FFF;
   /* Contenedor de las 2 secciones que separé dentro del footer */
   /* Elemento P (parrafo) del píe de pagina */
 }
@@ -120,7 +122,7 @@ body {
 }
 .footer__Align-Left {
   width: 50%;
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(80, 80, 80, 0.5);
 }
 .footer__Align-Left .btn {
   text-transform: uppercase;
@@ -128,7 +130,7 @@ body {
 }
 .footer__Align-Right {
   width: 50%;
-  border-left: 1px solid #000;
+  border-left: 1px solid rgba(80, 80, 80, 0.5);
   /* Logos de las redes sociales */
 }
 .footer__Align-Right .socialLogo {
@@ -180,7 +182,7 @@ body {
 }
 
 .card-title h2 {
-  color: rgb(173, 232, 255);
+  color: #2cb173;
   padding-top: 10px;
   font-family: impact;
 }
@@ -197,7 +199,7 @@ body {
 }
 
 .card-dir {
-  color: rgb(173, 232, 255);
+  color: #2cb173;
   text-transform: uppercase;
 }
 
@@ -207,7 +209,7 @@ body {
 }
 .primaryInfo h1 {
   font-family: impact;
-  color: #3B4275;
+  color: #178552;
   margin: 50px 0 0 0;
 }
 .primaryInfo i {
@@ -219,7 +221,7 @@ body {
 }
 .secondaryInfo h2 {
   font-family: impact;
-  color: #3B4275;
+  color: #178552;
   margin: 0;
 }
 .secondaryInfo i {
@@ -228,7 +230,8 @@ body {
 
 /* Imagenes del carrusel del index */
 .carousel {
-  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   max-width: 1900px;
   margin-inline: auto;
 }
