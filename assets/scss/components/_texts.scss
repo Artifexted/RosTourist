@@ -25,3 +25,19 @@
         padding-left: 7px;
     }
 }
+
+@for $numInfo from 0 to 8 {
+    .extraInfo-#{$numInfo} {
+        @include BkS {
+            width: 95vw;
+        }
+        @include BkM {
+            display: inline-block;
+            max-width: 70vw;
+            margin-right: 30vw;
+        }
+        background-color: rgba(random(255), random(255), random(255), 0.4);
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+}

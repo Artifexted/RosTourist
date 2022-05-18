@@ -245,6 +245,150 @@ body {
   padding-left: 7px;
 }
 
+.extraInfo-0 {
+  background-color: rgba(12, 138, 47, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-0 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-0 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-1 {
+  background-color: rgba(135, 85, 191, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-1 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-1 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-2 {
+  background-color: rgba(32, 161, 199, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-2 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-2 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-3 {
+  background-color: rgba(252, 190, 4, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-3 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-3 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-4 {
+  background-color: rgba(132, 129, 202, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-4 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-4 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-5 {
+  background-color: rgba(22, 231, 113, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-5 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-5 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-6 {
+  background-color: rgba(107, 166, 227, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-6 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-6 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
+.extraInfo-7 {
+  background-color: rgba(121, 158, 84, 0.4);
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 719px) {
+  .extraInfo-7 {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 720px) {
+  .extraInfo-7 {
+    display: inline-block;
+    max-width: 70vw;
+    margin-right: 30vw;
+  }
+}
+
 /* Imagenes del carrusel del index */
 .carousel {
   margin-top: 10px;
