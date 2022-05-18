@@ -6,37 +6,54 @@
     background: linear-gradient(rgb(49, 49, 49), rgb(0, 0, 0));
     color: #FFF;
 
-    /* Contenedor de las 2 secciones que separé dentro del footer */
+    /* Contenedor para ordenar las secciones del footer */
     &__Align {
-        display: inline-flex;
+        /* En vistas grandes el footer se ordenaría horizontal */
+        @include BkM {
+            display: inline-flex;
 
-        /* Parte izquierda del footer */
-        &-Left {
-            width: 50%;
-            border-right: 1px solid rgba(80, 80, 80, 0.5);
-
-            .btn {
-                text-transform: uppercase;
-                width: 150px;
+            /* Support section */
+            &-Support {
+                width: 50%;
+                border-right: 1px solid rgba(80, 80, 80, 0.5);
+            }
+            
+            /* Social Media section */
+            &-Social {
+                width: 50%;
+                border-left: 1px solid rgba(80, 80, 80, 0.5);
             }
         }
-        
-        /* Parte derecha del footer */
-        &-Right {
-            width: 50%;
-            border-left: 1px solid rgba(80, 80, 80, 0.5);
 
-            /* Logos de las redes sociales */
-            .socialLogo {
-                width: 36px;
-                transition: filter 1.5s;
-                filter: brightness(85%);
-
-                /* Efecto de brillo al pasar el cursor por el logo de la red social */
-                &:hover {
-                    filter: brightness(110%);
-                }
+        /* En vistas moviles el footer se ordenaría vertical */
+        @include BkS {
+            &-Support {
+                width: 100%;
+                margin-bottom: 15px;
             }
+
+            &-Social {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    /* Botón de "Enviar correo" */
+    .btn {
+        text-transform: uppercase;
+        width: 150px;
+    }
+
+    /* Logos de las redes sociales */
+    .socialLogo {
+        width: 36px;
+        transition: filter 1.5s;
+        filter: brightness(85%);
+
+        /* Efecto de brillo al pasar el cursor por el logo de la red social */
+        &:hover {
+            filter: brightness(110%);
         }
     }
 

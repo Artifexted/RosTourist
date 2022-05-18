@@ -14,7 +14,7 @@ a, a:hover {
 
 /* Body / Cuerpo de la pagina */
 body {
-  background-color: rgb(215, 215, 215);
+  background-image: url(../img/bg.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,34 +112,51 @@ body {
   text-align: center;
   background: linear-gradient(rgb(49, 49, 49), rgb(0, 0, 0));
   color: #FFF;
-  /* Contenedor de las 2 secciones que separé dentro del footer */
+  /* Contenedor para ordenar las secciones del footer */
+  /* Botón de "Enviar correo" */
+  /* Logos de las redes sociales */
   /* Elemento P (parrafo) del píe de pagina */
 }
 .footer__Align {
-  display: inline-flex;
-  /* Parte izquierda del footer */
-  /* Parte derecha del footer */
+  /* En vistas grandes el footer se ordenaría horizontal */
+  /* En vistas moviles el footer se ordenaría vertical */
 }
-.footer__Align-Left {
-  width: 50%;
-  border-right: 1px solid rgba(80, 80, 80, 0.5);
+@media screen and (min-width: 720px) {
+  .footer__Align {
+    display: inline-flex;
+    /* Support section */
+    /* Social Media section */
+  }
+  .footer__Align-Support {
+    width: 50%;
+    border-right: 1px solid rgba(80, 80, 80, 0.5);
+  }
+  .footer__Align-Social {
+    width: 50%;
+    border-left: 1px solid rgba(80, 80, 80, 0.5);
+  }
 }
-.footer__Align-Left .btn {
+@media screen and (max-width: 719px) {
+  .footer__Align-Support {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer__Align-Social {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.footer .btn {
   text-transform: uppercase;
   width: 150px;
 }
-.footer__Align-Right {
-  width: 50%;
-  border-left: 1px solid rgba(80, 80, 80, 0.5);
-  /* Logos de las redes sociales */
-}
-.footer__Align-Right .socialLogo {
+.footer .socialLogo {
   width: 36px;
   transition: filter 1.5s;
   filter: brightness(85%);
   /* Efecto de brillo al pasar el cursor por el logo de la red social */
 }
-.footer__Align-Right .socialLogo:hover {
+.footer .socialLogo:hover {
   filter: brightness(110%);
 }
 .footer p {
