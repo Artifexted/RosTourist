@@ -11,7 +11,7 @@
     text-align: center;
     margin-bottom: 35px;
     margin-inline: 15px;
-    border-radius: 20px;
+    border-radius: $borderImg;
     transition: background-color 1.5s;
     
     &:hover {
@@ -20,30 +20,58 @@
 
     @include BkS {
         width: 100%;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
     @include BkM {
-        width: 400px;
+        width: 500px;
+
+        h2 {
+            font-size: 2.1rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+        }
     }
-}
+    @include BkL {
+        width: 600px;
 
-.card-title h2 {
-    color: $cardHighlight;
-    padding-top: 10px;
-    font-family: $titleFont;
-}
+        h2 {
+            font-size: 2.2rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+    }
 
-.card-img img {
-    position: relative;
-    width: 95%;
-    height: 300px;
-    object-fit: cover;
-}
+    &-title h2 {
+        color: $cardHighlight;
+        padding-top: 10px;
+        font-family: $titleFont;
+    }
 
-.card-text {
-    padding: 10px;
-}
+    &-img img {
+        position: relative;
+        width: 95%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: $borderImg;
+    }
 
-.card-dir {
-    color: $cardHighlight;
-    text-transform: uppercase;
+    &-text {
+        padding: 10px;
+    }
+
+    &-dir {
+        color: $cardHighlight;
+        text-transform: uppercase;
+    }
 }

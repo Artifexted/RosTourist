@@ -164,7 +164,7 @@ body {
   /* Enlace (elemento A) hacia mi cuenta de Instagram */
 }
 .footer p .me, .footer p .me:hover {
-  color: rgb(0, 141, 0);
+  color: #2cb173;
   font-weight: bold;
 }
 
@@ -181,7 +181,7 @@ body {
   text-align: center;
   margin-bottom: 35px;
   margin-inline: 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: background-color 1.5s;
 }
 .card:hover {
@@ -191,30 +191,50 @@ body {
   .card {
     width: 100%;
   }
+  .card h2 {
+    font-size: 2rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 720px) {
   .card {
-    width: 400px;
+    width: 500px;
+  }
+  .card h2 {
+    font-size: 2.1rem;
+  }
+  .card p {
+    font-size: 1.1rem;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 600px;
+  }
+  .card h2 {
+    font-size: 2.2rem;
+  }
+  .card p {
+    font-size: 1.2rem;
+  }
+}
 .card-title h2 {
   color: #2cb173;
   padding-top: 10px;
   font-family: impact;
 }
-
 .card-img img {
   position: relative;
   width: 95%;
   height: 300px;
   object-fit: cover;
+  border-radius: 15px;
 }
-
 .card-text {
   padding: 10px;
 }
-
 .card-dir {
   color: #2cb173;
   text-transform: uppercase;
@@ -222,7 +242,7 @@ body {
 
 /* Texts / Textos */
 .primaryInfo {
-  padding: 8px 0 0 5px;
+  margin: 8px 0 0 5px;
 }
 .primaryInfo h1 {
   font-family: impact;
@@ -230,163 +250,67 @@ body {
   margin: 50px 0 0 0;
 }
 .primaryInfo i {
-  padding-left: 7px;
+  margin-left: 7px;
 }
 
-.secondaryInfo {
-  padding: 0 0 0 8px;
+.secondaryInfo, .extraInfo {
+  margin: 0 0 0 8px;
 }
-.secondaryInfo h2 {
+.secondaryInfo h2, .extraInfo h2 {
   font-family: impact;
   color: #178552;
   margin: 0;
 }
-.secondaryInfo i {
-  padding-left: 7px;
+.secondaryInfo i, .extraInfo i {
+  margin-left: 7px;
 }
 
-.extraInfo-0 {
-  background-color: rgba(12, 138, 47, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
+.extraInfo {
+  margin: 0;
+}
+.extraInfo-title, .extraInfo-title img {
+  position: relative;
+  width: 100%;
+  margin: 10px 0 15px 0;
+  object-fit: cover;
+  filter: brightness(75%);
+  transition: filter 1s;
 }
 @media screen and (max-width: 719px) {
-  .extraInfo-0 {
-    width: 95vw;
+  .extraInfo-title, .extraInfo-title img {
+    height: 120px;
   }
 }
 @media screen and (min-width: 720px) {
-  .extraInfo-0 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
+  .extraInfo-title, .extraInfo-title img {
+    height: 150px;
   }
 }
-
-.extraInfo-1 {
-  background-color: rgba(135, 85, 191, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-1 {
-    width: 95vw;
+@media screen and (min-width: 1024px) {
+  .extraInfo-title, .extraInfo-title img {
+    height: 200px;
   }
 }
-@media screen and (min-width: 720px) {
-  .extraInfo-1 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
+.extraInfo-title:hover, .extraInfo-title img:hover {
+  filter: brightness(85%);
 }
-
-.extraInfo-2 {
-  background-color: rgba(32, 161, 199, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
+.extraInfo-title h2, .extraInfo-title img h2 {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: #FFF;
+  text-shadow: 2px 2px #000;
 }
-@media screen and (max-width: 719px) {
-  .extraInfo-2 {
-    width: 95vw;
-  }
+.extraInfo h5 {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  color: #FFF;
+  padding: 6px;
 }
-@media screen and (min-width: 720px) {
-  .extraInfo-2 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
-}
-
-.extraInfo-3 {
-  background-color: rgba(252, 190, 4, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-3 {
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 720px) {
-  .extraInfo-3 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
-}
-
-.extraInfo-4 {
-  background-color: rgba(132, 129, 202, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-4 {
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 720px) {
-  .extraInfo-4 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
-}
-
-.extraInfo-5 {
-  background-color: rgba(22, 231, 113, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-5 {
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 720px) {
-  .extraInfo-5 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
-}
-
-.extraInfo-6 {
-  background-color: rgba(107, 166, 227, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-6 {
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 720px) {
-  .extraInfo-6 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
-}
-
-.extraInfo-7 {
-  background-color: rgba(121, 158, 84, 0.4);
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 719px) {
-  .extraInfo-7 {
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 720px) {
-  .extraInfo-7 {
-    display: inline-block;
-    max-width: 70vw;
-    margin-right: 30vw;
-  }
+.extraInfo p {
+  margin: 0 0 20px 8px;
 }
 
 /* Imagenes del carrusel del index */

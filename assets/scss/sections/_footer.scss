@@ -63,7 +63,7 @@
 
         /* Enlace (elemento A) hacia mi cuenta de Instagram */
         .me, .me:hover {
-            color: rgb(0, 141, 0);
+            color: $cardHighlight;
             font-weight: bold;
         }
     }
