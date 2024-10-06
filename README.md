@@ -4,7 +4,7 @@
 Es una pagina cuya función es ser guía de turismo para la ciudad de Rosario (Santa Fe, Argentina).
 
 ## Deploy ##
-Podés ver la página funcionando desde [aquí](https://aguslu0.github.io/RosTourist/)
+Podés ver la página funcionando desde [aquí](https://artifexted.github.io/RosTourist/)
 
 ## Construido con ##
 * HTML
